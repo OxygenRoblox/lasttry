@@ -6407,16 +6407,19 @@
     :cond_0
     return-void
 .end method
-
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 11
 
- const-string v0, "mobileblox"
+    # Initialize the native library
+    const-string v0, "mobileblox"
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 1
+    # Call the static method J1() from ActivitySplash
     invoke-static {}, Lcom/roblox/client/startup/ActivitySplash;->J1()Z
 
+    # Return from the method
+    return-void
+.end method
     .line 2
     .line 3
     .line 4
